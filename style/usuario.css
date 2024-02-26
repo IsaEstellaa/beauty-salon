@@ -1,0 +1,237 @@
+.tabela-usuarios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card informativo */
+.card-informativo {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 2px 6px #0000003d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    width: fit-content;
+}
+
+.card-informativo__permissoes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-informativo .informacao {
+    max-width: 600px;
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #d3e6ff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #207fff;
+}
+
+.card-informativo .informacao span, .card-informativo .informacao strong {
+    color: #0754bb;
+}
+
+
+/* Cards Usuario */
+.tabela-usuarios .usuario {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 2px 6px #0000003d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.usuario .usuario__nome, .usuario .usuario__email, .usuario .usuario__nivel {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #858585;
+    font-weight: 300;
+}
+
+.usuario .usuario__nome span {
+    font-size: 20px;
+    color: var(--cor-destaque-escuro);
+    font-weight: 500;
+}
+
+.usuario .usuario__email span{
+    font-size: 16px;
+    color: var(--preto);
+    font-weight: 500;
+}
+
+.usuario .usuario__nivel span{
+    color: var(--cor-destaque-texto);
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Filtro semanal */
+.warning-text {
+    font-size: 15px;
+    color: #aa4d00;
+    margin-top: 10px;
+}
+
+.form-filtro-semanal input{
+    background-color: transparent;
+    border: 1px solid #cecece;
+    height: 30px;
+    border-radius: 100px;
+    padding: 0 10px;
+}
+
+.filtrarSemana {
+    background-color: var(--cor-destaque) !important;
+    color: #c48a05;
+    font-weight: 700;
+    border: 1px solid #c48a05 !important;
+    cursor: pointer;
+}
+
+.limparSemana {
+    background-color: transparent !important;
+    color: #c48a05;
+    height: 30px;
+    font-weight: 700;
+    border: 1px solid #c48a05 !important;
+    border-radius: 100px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.contagem-agendamentos {
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.contagem-agendamentos span {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contagem-agendamentos.concluidos span{
+    color: #058500;
+}
+
+.contagem-agendamentos.pendentes span{
+    color: #207fff;
+}
+
+.form-check {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+form:first-child {
+    margin-top: 20px;
+}
+
+.form-check > div {
+    display: flex;
+    gap: 20px;
+}
+
+.form-check label, .form-check p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.usuarios__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 2px 12px #0000003d;
+    margin-bottom: 30px;
+}
+
+.usuarios__inputs form {
+    width: 100%;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.usuarios__inputs .input-text, .input-button {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 10px;
+}
+
+#limparCampos {
+    width: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
+.buttons-radio {
+    gap: 8px !important;
+}
+
+.button-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.modified-button, .editar-button {
+    display: block;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 8px;
+    height: 24px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.title {
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    margin: 20px;
+    font-weight: 300;
+    color: var(--preto);
+}
+
+@media (max-width: 1000px) {
+    .tabela-usuarios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .tabela-usuarios {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

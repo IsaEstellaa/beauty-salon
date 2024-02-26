@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playpen+Sans:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playpen+Sans:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-primaria: #FFCC70;
+    --cor-destaque: #F1E4C3;
+    --cor-destaque-texto: #C6A969;
+    --cor-destaque-escuro: #8b7441;
+    --preto: #1d1d1d;
+}
+
+* {
+    word-break: break-word;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabecalho */
+.header {
+    background: var(--cor-primaria);
+    box-shadow: 0px 4px 12px #00000026;
+    margin-bottom: 40px;
+}
+
+.header__logo img{
+    width: 80px;
+}
+
+.header__list {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__list .header__user {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__user .item{
+    color: var(--cor-destaque-escuro);
+    padding: 10px;
+    font-weight: 500;
+}
+
+.destaque{
+    background-color: var(--cor-destaque);
+    color: var(--cor-destaque-escuro);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 4px #00000052;
+}
+
+.destaque:hover {
+    background-color: #f6e8c4;
+    transition: 0.3s ease-in;
+}
+
+.outlined {
+    border: 2px solid var(--cor-destaque-escuro);
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.outlined:hover {
+    filter: contrast(0.9);
+}
+
+.sairButton {
+    font-weight: 700;
+    color: rgb(114, 0, 0);
+}
+/* Fim cabecalho */
+
+/* Inicio Rodape */
+.rodape {
+    background-color: var(--cor-primaria);
+    box-shadow: 0px -4px 12px #00000026;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.rodape .text {
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    font-weight: 500;
+    color: var(--cor-destaque-escuro);
+}
+/* Fim Rodape */
+
+/* Botoes */
+.excluir-button {
+    background-color: red;
+}
+.editar-button {
+    background-color: rgb(136, 136, 136);
+}
+
+#cadastroAgendamento, #updateAgendamento, #updateUser {
+    background-color: var(--cor-primaria);
+    transition: 0.3s ease-in;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid var(--cor-destaque-escuro);
+    color: var(--cor-destaque-escuro);
+    font-family: "Playpen Sans", cursive;
+    margin-top: 10px;
+}
+
+#cadastroAgendamento:hover, #updateAgendamento:hover, #updateUser:hover{
+    background-color: var(--cor-destaque);
+    transition: 0.3s ease-in;
+}
+
+#limparCampos {
+    width: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor-destaque-texto);
+    border: 1px solid var(--cor-destaque-texto);
+}
+
+.input-readonly {
+    color: #999;
+    background-color: #eee !important;
+    cursor: not-allowed;
+}
+
+select {
+    height: 25px;
+}
+
+.input-readonly:focus {
+    outline: none;
+}
+
+/* Voltar ao topo */
+.voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    visibility: hidden;
+    transition: 0.5s transform ease-in;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: var(--cor-destaque-escuro);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0px 0px 10px #00000045;
+}
+
+.voltar-topo.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s transform ease-in;
+    transform: translateY(-20px);
+}
+
+@media (max-width: 820px) {
+    .header__user {
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin-left: 20px;
+    }
+}

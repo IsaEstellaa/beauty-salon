@@ -1,0 +1,88 @@
+.cadastro, .login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 2px 12px #0000003d;
+    margin-bottom: 30px;
+}
+
+.login h1, .cadastro h1 {
+    font-family: "Playpen Sans", cursive;
+    font-weight: 400;
+}
+
+.title-home {
+    font-family: "Playpen Sans", cursive;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.cadastro input, .login input {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-senha {
+    position: relative;
+}
+
+.password-eye {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    font-size: 22px !important;
+    cursor: pointer;
+}
+
+.eye-visible .pass-hidden {
+    display: none;
+}
+
+.eye-hidden .pass-visible {
+    display: none;
+}
+
+#cadastroUser, #entrar {
+    background-color: var(--cor-primaria);
+    transition: 0.3s ease-in;
+    width: 200px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid var(--cor-destaque-escuro);
+    color: var(--cor-destaque-escuro);
+    font-family: "Playpen Sans", cursive;
+    margin-top: 10px;
+}
+
+#cadastroUser:hover, #entrar:hover {
+    background-color: var(--cor-destaque);
+    transition: 0.3s ease-in;
+}
+
+@media (max-width: 740px) {
+    .cadastro, .login {
+        max-width: 300px;
+    }
+}

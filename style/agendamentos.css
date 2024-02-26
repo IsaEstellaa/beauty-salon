@@ -1,0 +1,231 @@
+.title {
+    text-align: center;
+    font-family: "Playpen Sans", cursive;
+    margin: 30px;
+    font-weight: 300;
+    color: var(--preto);
+}
+
+.boas-vindas {
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: var(--cor-destaque);
+    padding: 10px;
+    font-weight: 700;
+    font-family: monospace;
+    color: var(--cor-destaque-texto);
+    margin-bottom: 32px;
+}
+
+.tabela-agendamentos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tabela-agendamentos .agendamento {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 2px 6px #0000003d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.agendamento .agendamento__situacao {
+    font-size: 16px;
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* Situacoes do agendamento */
+/* Negado */
+.agendamento__situacao.negado {
+    background-color: #ffc5c5;
+    color: #bb0000;
+    border: 1px solid #bb0000;
+}
+
+/* Em processamento */
+.agendamento__situacao.processamento {
+    background-color: #ffecbf;
+    color: #c48a05;
+    border: 1px solid #c48a05;
+}
+
+/* Aceito */
+.agendamento__situacao.aceito {
+    background: #d3e6ff;
+    color: #207fff;
+    border: 1px solid #207fff;
+}
+
+/* Concluido */
+.agendamento__situacao.concluido {
+    background: #d7ffd5;
+    color: #058500;
+    border: 1px solid #058500;
+}
+
+/* Tempo excedido */
+.warning-tempo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #aa1800;
+}
+
+.agendamento .agendamento__servico, .agendamento .agendamento__criador, .agendamento .agendamento__observacao, .agendamento .agendamento__data-cad{
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #858585;
+    font-weight: 300;
+}
+
+.agendamento__criador span {
+    font-size: 20px;
+    color: var(--preto);
+    font-weight: 500;
+}
+
+.agendamento .agendamento__servico span{
+    font-size: 18px;
+    color: var(--cor-destaque-escuro);
+    font-weight: 500;
+}
+
+.agendamento .agendamento__observacao span{
+    margin: 8px 0;
+    color: #1d1d1d;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.agendamento .agendamento__data-cad span {
+    font-size: 16px;
+    color: var(--preto);
+    font-weight: 500;
+}
+
+.form-filtro input{
+    background-color: transparent;
+    border: 1px solid #cecece;
+    height: 30px;
+    border-radius: 100px;
+    padding: 0 10px;
+    margin: 0 0 8px;
+}
+
+.filtrarAgends {
+    background-color: var(--cor-destaque) !important;
+    color: #c48a05;
+    font-weight: 700;
+    border: 1px solid #c48a05 !important;
+    cursor: pointer;
+}
+
+.limparAgends {
+    background-color: transparent !important;
+    color: #c48a05;
+    height: 30px;
+    font-weight: 700;
+    border: 1px solid #c48a05 !important;
+    border-radius: 100px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+.form-check {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+form:first-child {
+    margin-top: 20px;
+}
+
+.form-check > div {
+    display: flex;
+    gap: 20px;
+}
+
+.form-check label, .form-check p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.agendamentos__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 1px 2px 12px #0000003d;
+    margin-bottom: 30px;
+}
+
+.agendamentos__inputs form {
+    width: 100%;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.agendamentos__inputs .input-text, .input-button {
+    background-color: transparent;
+    border: 1px solid #cecece;
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 10px;
+}
+
+.buttons-radio {
+    gap: 8px !important;
+}
+
+.button-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.modified-button, .editar-button {
+    display: block;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 8px;
+    height: 24px;
+    color: #fff;
+    font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+    .tabela-agendamentos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .tabela-agendamentos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agendamentos__inputs .form-check > div{
+        flex-wrap: wrap;
+    }
+}
