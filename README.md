@@ -14,7 +14,7 @@ O projeto consiste em fazer um sistema que permite aos clientes agendarem e gere
 ### Tecnologias utilizadas
 Foi desenvolvido utilizando tecnologias como PHP para o desenvolvimento da lógica do servidor, HTML e CSS para a estruturação e estilização do conteúdo visual, e jQuery, uma biblioteca de JavaScript, para adicionar funcionalidades interativas ao sistema. O MySQL foi utilizado como sistema de gerenciamento de banco de dados, armazenando informações como detalhes do cliente, agendamentos e configurações de níveis de acesso. 
 #### Como rodar o projeto
-- Baixar o "salon-beauty.sql" e importar em um database com o mesmo nome (salon-beauty) e com a 
+- Banco: Utilizei o phpMyAdmin. É necessário baixar o "salon-beauty.sql" (pasta sql) e importar em um database com o mesmo nome (salon-beauty) e com a 
 ```bash
   utf8mb4_general_ci
 ```
